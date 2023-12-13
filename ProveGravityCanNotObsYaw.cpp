@@ -23,6 +23,7 @@ int main()
     const Eigen::Matrix3d Rga = Eigen::AngleAxisd(angle, rot_axis).matrix();
     const Eigen::Matrix3d Rag = Rga.transpose();
     Eigen::Vector3d ypr = Rag.eulerAngles(2, 1, 0);
+    
     Eigen::IOFormat fmt(2);
     std::cout << std::fixed; // Scientific numeration output is prohibited
 
